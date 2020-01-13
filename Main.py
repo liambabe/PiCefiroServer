@@ -1,4 +1,8 @@
 from Server import Server
+from logger import Logger, LogType
 
-server = Server()
-server.run()
+serverLogger = Logger("LogFile.txt")
+
+with serverLogger:
+    server = Server(serverLogger)
+    server.run()
