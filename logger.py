@@ -13,6 +13,7 @@ class LogType(Enum):
     Error = 6
     LoggerStart = 7
     LoggerEnd = 8
+    ModuleAction = 9
 
 class Logger:
 
