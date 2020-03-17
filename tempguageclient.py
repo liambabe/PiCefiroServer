@@ -11,4 +11,4 @@ while True:
     value = tempReader.read()
     print(value)
     #oled.displayText(value)
-    time.sleep(1)
+    sleep(1)
