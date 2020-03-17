@@ -9,5 +9,6 @@ oled = OledController()
 
 while True:
     value = tempReader.read()
-    oled.displayText(value)
+    print(value)
+    #oled.displayText(value)
     time.sleep(1)
