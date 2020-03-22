@@ -22,7 +22,7 @@ class OledController(CarModule):
 
         self.i2c = board.I2C()
         self.oled = adafruit_ssd1306.SSD1306_I2C(self.WIDTH, self.HEIGHT, self.i2c, addr=0x3c)
-        self.font = ImageFont.load_default()
+        self.font = ImageFont.truetype("/usr/share/fonts/Ubuntu-R.ttf", 16)
 
         self.clear()
         self.initScreen()
