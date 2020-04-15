@@ -10,9 +10,10 @@ oled = OledController()
 fan = RadiatorFanController()
 
 def thread_Display(name):
-    value = fan.getState()
-    oled.displayText(str(value))
-    sleep(1)
+    while true:
+        value = fan.getState()
+        oled.displayText(str(value))
+        sleep(1)
 
 displayThread = threading.Thread(target=thread_Display, args=(1,))
 displayThread.start()
