@@ -12,6 +12,7 @@ class RadiatorFanController(CarModule):
 
         self.TRANSISTOR_PIN = 21
         self.TRANSISTOR_STATE = False
+        self.TRANSISTOR = DigitalOutputDevice(self.TRANSISTOR_PIN)
 
     def getState(self) -> bool:
         return self.TRANSISTOR_STATE
@@ -20,8 +21,10 @@ class RadiatorFanController(CarModule):
     def setState(self, state: str): 
         if (state.strip().lower() == "on"):
             self.TRANSISTOR_STATE = True
+            self.TRANSISTOR.on()
         elif (state.strip().lower() == "off"):
             self.TRANSISTOR_STATE = False
+            self.TRANSISTOR.off()
         else:
             #TODO implement error here
             pass
