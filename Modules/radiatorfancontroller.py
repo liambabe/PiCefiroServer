@@ -1,12 +1,12 @@
 from typing import Type
-import gpiozero
+from gpiozero import DigitalOutputDevice
 from Modules.carmodule import CarModule
 
 class RadiatorFanController(CarModule):
 
     TRANSISTOR_STATE: bool
     TRANSISTOR_PIN: int
-
+    
     def __init__(self):
         super(RadiatorFanController, self).__init__("Radiator Fan Controller")
 
