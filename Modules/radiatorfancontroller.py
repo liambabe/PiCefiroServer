@@ -16,3 +16,13 @@ class RadiatorFanController(CarModule):
     def getState(self) -> bool:
         return self.TRANSISTOR_STATE
 
+    #turn transistor on and off
+    def setState(self, state: str): 
+        if (state.strip().lower() == "on"):
+            self.TRANSISTOR_STATE = True
+        elif (state.strip().lower() == "off"):
+            self.TRANSISTOR_STATE = False
+        else:
+            #TODO implement error here
+            pass
+
