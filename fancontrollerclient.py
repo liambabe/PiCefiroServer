@@ -18,7 +18,7 @@ displayThread = threading.Thread(target=thread_Display, args=(1,))
 displayThread.start()
 
 while True:
-    print("Value is currently: " + fan.getState())
+    print("Value is currently: " + str(fan.getState()))
     userInput = input('set on or off: ')
     fan.setState(userInput)
 
